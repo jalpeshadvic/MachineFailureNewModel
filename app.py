@@ -22,14 +22,14 @@ with st.form("prediction_form"):
     col1, col2 = st.columns(2)  # Creating two columns for layout
 
     with col1:
-        temperature = st.slider("Temperature", 35.55, 121.94)
-        vibration = st.slider("Vibration", -17.9, 113.8)
-        humidity = st.slider("Humidity", 30.0, 80.0)
+        temperature = st.slider(":rainbow[Temperature]", 35.55, 121.94)
+        vibration = st.slider(":rainbow[Vibration]", -17.9, 113.8)
+        humidity = st.slider(":rainbow[Humidity]", 30.0, 80.0)
     
     with col2:
-        pressure = st.slider("Pressure", 1,5)
-        energy_consumption = st.slider("Energy Consumption", 0.5, 5.0)
-        machine_status = st.selectbox("Machine Status", (0,1,2))
+        pressure = st.slider(":rainbow[Pressure]", 1,5)
+        energy_consumption = st.slider(":rainbow[Energy Consumption]", 0.5, 5.0)
+        machine_status = st.selectbox(":rainbow[Machine Status]", (0,1,2))
 
     # Predict button
     predict_button = st.form_submit_button("Predict Failure")
