@@ -29,7 +29,10 @@ with st.form("prediction_form"):
     with col2:
         pressure = st.slider(":rainbow[Pressure]", 1,5)
         energy_consumption = st.slider(":rainbow[Energy Consumption]", 0.5, 5.0)
+        # option = [0,1,2]
         machine_status = st.radio(":rainbow[Machine Status]", (0,1,2), horizontal= True)
+        # machine_status = st.pills(":rainbow[Machine Status]", option, selection_mode = "single")
+
 
     # Predict button
     predict_button = st.form_submit_button("Predict Failure")
