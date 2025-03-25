@@ -17,8 +17,6 @@ with st.form("prediction_form"):
     st.subheader("Enter Machine Parameters")
 
     # Type selection (first column)
-    
-
     col1, col2 = st.columns(2)  # Creating two columns for layout
 
     with col1:
@@ -33,7 +31,6 @@ with st.form("prediction_form"):
         machine_status = st.radio(":rainbow[Machine Status]", (0,1,2), horizontal= True)
         # machine_status = st.pills(":rainbow[Machine Status]", option, selection_mode = "single")
 
-
     # Predict button
     predict_button = st.form_submit_button("Predict Failure")
 
@@ -46,18 +43,6 @@ if predict_button:
 
     # Predict using the ML model
     prediction = model.predict(input_data)
-
-    # Display result
-    failure_types = {
-        0: "No Failure",
-        1: "Heat Dissipation Failure",
-        2: "Power Failure",
-        3: "Overstrain Failure",
-        4: "Tool Wear Failure",
-        5: "Random Failure"
-    }
-
-    result = failure_types.get(prediction[0], "Unknown Failure")
 
     if prediction[0] == 0:
         st.success(f"No Failure Predicted ✅")
