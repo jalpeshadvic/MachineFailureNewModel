@@ -10,7 +10,7 @@ model = joblib.load("model_rfcModel.pkl")
 st.set_page_config(page_title="Machine Failure Prediction", layout="wide")
 
 # Title
-st.markdown("<h1 style='text-align: center;'>Machine Failure Prediction</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>Machine Failure Prediction</h2>", unsafe_allow_html=True)
 
 # Main input section (centered)
 with st.form("prediction_form"):
